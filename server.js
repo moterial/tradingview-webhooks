@@ -17,6 +17,7 @@ app.post('/buy-crypto', async (req, res) => {
   const symbol = req.body.symbol;
   const quantity = parseFloat(req.body.quantity);
   const price = parseFloat(req.body.price);
+  
   var stopLossPrice = 0;
   var takeProfitPrice = 0;
   var takeProfitPrice2 = 0;
