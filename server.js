@@ -49,6 +49,7 @@ app.post('/buy-crypto', async (req, res) => {
       clOrdId: Date.now().toString(),
       slTriggerPx: stopLossPrice,
       slOrdPx: -1,
+      //模擬測試
     profitTargets: [
     {
         targetPx:takeProfitPrice,
@@ -79,6 +80,7 @@ app.post('/buy-crypto', async (req, res) => {
     'OK-ACCESS-SIGN': signature,
     'OK-ACCESS-TIMESTAMP': timestamp,
     'OK-ACCESS-PASSPHRASE': apiPassphrase,
+    'x-simulated-trading': 1,
     'Content-Type': 'application/json'
   };
 
@@ -104,7 +106,7 @@ function generateSignature(secretKey, signString) {
 //     const price = parseFloat(price1); 
     
 
-    
+
 // }
 
 // async function sendSellOrder(symbol, quantity1, price1, res) {
