@@ -89,17 +89,22 @@ app.post('/buy-crypto', async (req, res) => {
     'x-simulated-trading': 1,
     'Content-Type': 'application/json'
   };
+  console.log(body);
+console.log(headers);
 
-  try {
-    const response = await axios.post(url, body, { headers });
-    res.json(response.data);
-  } catch (error) {
-    res.status(500).json(response.msg);
-  }
+    axios.post(url,{
+        headers: headers,
+        data: body
+    }).then(function(response){
+        res.json(response.data);
+    }).catch(function(error){
+        console.log(error);
+        res.json(error);
+    });
 
 
-   
 });
+   
 
 // Generate signature for OKX API request
 function generateSignature(secretKey, signString) {
