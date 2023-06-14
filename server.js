@@ -85,8 +85,8 @@ app.post('/buy-crypto', async (req, res) => {
   };
 
   try {
-    const response = await axios.post(url, body, { headers });
-    res.json(response.data);
+    // const response = await axios.post(url, body, { headers });
+    res.json(body);
   } catch (error) {
     res.status(500).json({ error: 'Error sending buy order.' });
   }
