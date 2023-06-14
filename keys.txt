@@ -1,0 +1,15 @@
+key:PK2VYG2NOWE5VXQ6DTWA
+secret:ktYdQEUcZ90EFBWtnLElXg6Blh4lhl6p1ynX4Xdb
+endpoint: https://paper-api.alpaca.markets
+
+
+
+
+
+
+
+apikey = "bf562a2f-6e57-4da3-8bf5-3665f8925769"
+secretkey = "019576B91ED668CE4FB8456658738B0B"
+IP = ""
+備註名 = "moterial"
+權限 = "讀取/交易"
