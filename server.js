@@ -12,12 +12,17 @@ const apiSecret = '019576B91ED668CE4FB8456658738B0B';
 const apiPassphrase = 'Q@bgJf67R';
 const apiUrl = 'https://www.okex.com';
 
+//a / route, and return a res.json() response
+app.get('/', (req, res) => {
+    res.json({ message: 'Hello World!' });
+});
+
 // Define a route for sending the buy order
 app.post('/buy-crypto', async (req, res) => {
   const symbol = req.body.symbol;
   const quantity = parseFloat(req.body.quantity);
   const price = parseFloat(req.body.price);
-  
+
   var stopLossPrice = 0;
   var takeProfitPrice = 0;
   var takeProfitPrice2 = 0;
